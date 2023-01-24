@@ -1,5 +1,5 @@
 {
-  "name": "amity-social-cloud-uikit-web-opensource",
+  "name": "@WEBO-Digital/amity-social-cloud-uikit-web-opensource",
   "version": "1.0.0",
   "engines": {
     "node": ">=16",
