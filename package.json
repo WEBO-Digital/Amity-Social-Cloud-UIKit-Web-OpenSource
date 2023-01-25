@@ -7,7 +7,7 @@
   },
   "main": "build/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@WEBO-Digital"
+    "@WEBO-Digital:registry": "https://npm.pkg.github.com/"
   },
   "files": [
     "build"
