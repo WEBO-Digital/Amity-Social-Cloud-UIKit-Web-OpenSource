@@ -9,6 +9,9 @@ const actionItemActiveStyles = css`
       & > .actionItemChild {
         color: ${theme.palette.primary.main};
       }
+      &:hover > .actionItemChild {
+        color: ${theme.palette.neutral.main};
+      }
     `}
 `;
 
@@ -20,7 +23,8 @@ const actionItemContainerStyles = css`
   color: ${({ theme }) => theme.palette.neutral.main};
   justify-content: left;
   &:hover:not(:disabled) {
-    background-color: ${({ theme }) => theme.palette.base.shade4};
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.neutral.main};
   }
   &:disabled {
     color: ${({ theme }) => theme.palette.neutral.shade2};
@@ -57,7 +61,7 @@ export const IconWrapper = styled.div`
           color: white;
         `
       : css`
-          background: ${theme.palette.base.shade4};
+          background: ${theme.palette.primary.main};
           color: inherit;
         `};
 `;
