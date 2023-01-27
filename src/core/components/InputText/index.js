@@ -45,6 +45,7 @@ const styling = css`
   box-sizing: border-box;
   outline: none;
   font: inherit;
+  color: white;
 
   &::placeholder {
     font-weight: 400;

@@ -14,6 +14,7 @@ export const Avatar = styled(UIAvatar)`
 
 export const OptionMenu = styled(UIOptionMenu)`
   color: ${({ theme }) => theme.palette.neutral.main};
+  background-color: transparent;
 `;
 
 export const CommentBlock = styled.div`
@@ -57,7 +58,7 @@ export const CommentContent = styled.div`
   overflow-wrap: anywhere !important;
   word-break: break-word;
   color: ${({ theme }) => theme.palette.neutral.main};
-  background-color: ${({ theme }) => theme.palette.base.shade4};
+  background-color: ${({ theme }) => theme.palette.system.borders};
   border-radius: 0 12px 12px 12px;
   padding: 12px;
   display: inline-block;
@@ -73,6 +74,7 @@ export const AuthorName = styled.span`
   // react-truncate-markup tries to set to inline-block
   display: inline !important;
   ${({ theme }) => theme.typography.body}
+  color: ${({ theme }) => theme.palette.base.main};
 `;
 
 export const CommentDate = styled(Time)`
@@ -162,7 +164,9 @@ export const ReplyIcon = styled(Reply).attrs({ width: 16, height: 16 })`
   margin-right: 5px;
 `;
 
-export const ReplyButton = styled(SecondaryButton)``;
+export const ReplyButton = styled(SecondaryButton)`
+  background-color: transparent;
+`;
 
 export const CommentEditContainer = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImage from '~/images/bg.png';
+import backgroundImage from '~/images/rooms.png';
 
 export default styled.div`
   /* background-color: white; */

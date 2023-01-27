@@ -27,7 +27,7 @@ export const LoadMoreButton = styled(Button)`
 
   &.reply-button {
     width: fit-content;
-    background-color: ${({ theme }) => theme.palette.base.shade4};
+    background-color: ${({ theme }) => theme.palette.system.borders};
     color: ${({ theme }) => theme.palette.base.shade1};
     margin: 12px 0px 16px 3rem;
     padding: 5px 12px;

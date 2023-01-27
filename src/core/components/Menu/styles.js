@@ -13,8 +13,8 @@ export const MenuItem = styled.div`
 
   ${({ hover, theme }) => hover && `background: ${theme.palette.base.shade4};`}
   ${({ active, theme }) => active && `color: ${theme.palette.primary.shade1};`}
-  
+
   &:hover {
-    ${({ theme }) => `background: ${theme.palette.base.shade4};`}
+    ${({ theme }) => `background: ${theme.palette.primary.main};`}
   }
 `;

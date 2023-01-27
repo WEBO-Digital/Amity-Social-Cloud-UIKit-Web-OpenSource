@@ -12,7 +12,7 @@ const commonButtonStyles = ({ theme }) => css`
   ${({ fullWidth }) => fullWidth && 'width: 100%;'}
   justify-content: center;
   &:disabled {
-    cursor: default;
+    cursor: not-allowed;
   }
   & > :not(:first-child) {
     margin-left: 0.5rem;
@@ -21,7 +21,7 @@ const commonButtonStyles = ({ theme }) => css`
 
 export const DefaultButton = styled.button`
   ${commonButtonStyles};
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.palette.system.borders};
   border: 1px solid #e3e4e8;
   color: ${({ theme }) => theme.palette.neutral.main};
   &:hover {
@@ -36,7 +36,7 @@ export const PrimaryButton = styled.button`
   ${commonButtonStyles};
   border: none;
   background-color: ${({ theme }) => theme.palette.primary.main};
-  color: white;
+  color: ${({ theme }) => theme.palette.base.main};
   &:hover:not(:disabled) {
     opacity: 0.8;
   }
@@ -48,13 +48,14 @@ export const PrimaryButton = styled.button`
 export const SecondaryButton = styled.button`
   ${commonButtonStyles};
   color: ${({ theme }) => theme.palette.neutral.shade1};
-  background-color: transparent;
+  background-color: ${({ theme }) => theme.palette.system.borders};
   border: none;
   &:hover {
-    background-color: #f2f2f4;
+    opacity: 0.8;
   }
   &:disabled {
     color: ${({ theme }) => theme.palette.neutral.shade2};
+    background-color: ${({ theme }) => theme.palette.tertiary.shade2};
   }
   ${({ active, theme }) => active && `color: ${theme.palette.primary.shade1};`}
 `;
