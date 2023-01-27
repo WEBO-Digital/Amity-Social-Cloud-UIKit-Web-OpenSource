@@ -35,7 +35,6 @@ export const SocialSearchInput = styled(InputAutocomplete)`
   border-radius: 4px;
   outline: none;
   color: ${({ theme }) => theme.palette.base.main};
-
   &::placeholder {
     color: ${({ theme }) => theme.palette.base.shade1};
   }

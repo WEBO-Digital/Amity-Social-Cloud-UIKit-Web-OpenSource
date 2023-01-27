@@ -2,7 +2,8 @@ import React, { createContext, useContext, useMemo } from 'react';
 import { stripUndefinedValues } from '~/helpers/utils';
 
 const defaultConfig = {
-  socialCommunityCreationButtonVisible: true,
+  // Disabling the ability to create button by anyone
+  socialCommunityCreationButtonVisible: false,
 };
 
 const ConfigContext = createContext(defaultConfig);

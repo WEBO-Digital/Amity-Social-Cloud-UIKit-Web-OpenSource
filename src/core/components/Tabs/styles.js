@@ -14,17 +14,18 @@ export const TabsList = styled.ul`
 
 export const TabItem = styled.li`
   display: inline-block;
+  background: ${({ theme }) => theme.palette.system.background};
 `;
 
 export const TabButton = styled.button`
   padding: 0.75em;
   margin-right: 0.5em;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.palette.system.background};
   border: none;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   outline: none;
-  color: #abaeba;
+  color: ${({ theme }) => theme.palette.base.main};
   ${({ theme }) => theme.typography.bodyBold}
   text-align: center;
 

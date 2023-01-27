@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import feedBg from '~/images/rooms.png';
 
 import customizableComponent from '~/core/hocs/customization';
 
@@ -13,7 +14,11 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 20px 0 0;
-  background: #f7f7f8;
+  /* background: #f7f7f8; */
+  background-image: url(${feedBg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const Main = styled.div`

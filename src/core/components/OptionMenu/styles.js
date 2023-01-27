@@ -19,7 +19,7 @@ export const Option = styled.div`
   padding: 8px 12px;
 
   &:hover {
-    background: #f2f2f4;
+    background-color: ${({ theme }) => theme.palette.primary.main};
   }
 
   &.danger-zone {
