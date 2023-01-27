@@ -10,6 +10,7 @@ const SectionContainer = styled.div`
 
 const ListHeading = styled.h4`
   ${({ theme }) => theme.typography.title};
+  color: ${({ theme }) => theme.palette.primary.base};
   padding: 0 8px;
   margin: 1em 0;
 `;
