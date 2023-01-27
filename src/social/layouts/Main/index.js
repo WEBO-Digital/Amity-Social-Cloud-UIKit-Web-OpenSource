@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import feedBg from '~/images/rooms.png';
+import feedBg from '~/images/bg.png';
 
 import customizableComponent from '~/core/hocs/customization';
 
