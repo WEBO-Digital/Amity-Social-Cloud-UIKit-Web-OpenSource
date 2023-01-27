@@ -46,6 +46,18 @@ module.exports = (_, argv = {}) => ({
           },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|gif|jpe?g)$/,
+        use: [
+          {
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'src/images/',
+            },
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
 });
