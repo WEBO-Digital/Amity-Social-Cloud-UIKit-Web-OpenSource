@@ -10,6 +10,7 @@ const List = styled.div`
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 0.5rem;
+  padding: 0 16px;
 `;
 
 const ButtonLink = styled.button.attrs({ role: 'button' })`

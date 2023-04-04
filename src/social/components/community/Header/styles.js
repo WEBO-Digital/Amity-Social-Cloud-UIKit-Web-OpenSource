@@ -19,6 +19,11 @@ const CommunityHeaderContainer = styled.a.attrs((props) => props)`
   border-radius: 4px;
   align-items: center;
   color: ${({ theme }) => theme.palette.base.main};
+  @media (max-width: 993px) {
+    display: flex;
+    flex-direction: column;
+    color: ${({ theme }) => theme.palette.grayshade4.main};
+  }
 
   ${({ $loading }) =>
     !$loading &&

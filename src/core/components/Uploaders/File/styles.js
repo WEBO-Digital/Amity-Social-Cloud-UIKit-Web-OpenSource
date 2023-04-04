@@ -61,6 +61,7 @@ export const FileName = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: ${({ theme }) => theme.palette.tertiary.main};
   ${({ theme }) => theme.typography.bodyBold}
 `;
 

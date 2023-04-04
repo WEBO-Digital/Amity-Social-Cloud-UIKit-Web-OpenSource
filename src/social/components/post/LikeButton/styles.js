@@ -7,7 +7,8 @@ import { SecondaryButton } from '~/core/components/Button';
 import { ThumbsUp } from '~/icons';
 
 const isLikedStyle = css`
-  color: ${({ theme }) => theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.greenshade.main};
+  padding: 0 !important;
 `;
 
 export const StyledLikeButton = styled(SecondaryButton)`

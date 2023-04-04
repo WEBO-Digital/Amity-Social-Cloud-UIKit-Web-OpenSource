@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import feedBg from '~/images/bg.png';
 
 import customizableComponent from '~/core/hocs/customization';
 
@@ -15,10 +14,16 @@ const Container = styled.div`
   height: 100%;
   padding: 0 20px 0 0;
   /* background: #f7f7f8; */
-  background-image: url(${feedBg});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(${feedBg});
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: ${({ theme }) => theme.palette.bgblack.main};
+  @media (max-width: 993px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
 `;
 
 const Main = styled.div`
@@ -33,6 +38,9 @@ const Main = styled.div`
 const Side = styled.div`
   grid-area: side;
   overflow: auto;
+  @media (max-width: 993px) {
+    overflow: unset;
+  }
 `;
 
 const Layout = ({ aside, children }) => {

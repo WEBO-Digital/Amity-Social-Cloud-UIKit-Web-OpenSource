@@ -9,17 +9,26 @@ export const EngagementBarContainer = styled.div`
 export const Counters = styled.div`
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e3e4e8;
-  padding: 8px 0;
+  margin: 16px;
+  &:empty {
+    display: none;
+  }
+`;
+
+export const CommentBar = styled.div`
+  background: ${({ theme }) => theme.palette.bgblack.main};
+  padding: 0 16px;
 `;
 
 export const InteractionBar = styled.div`
   display: flex;
-  padding: 2px 0;
+  margin: 16px;
   gap: 1rem;
-  border-bottom: 1px solid #e3e4e8;
   & > button {
     background-color: transparent;
+    width: calc(50% - 0.5rem);
+    border-radius: 29px;
+    background-color: ${({ theme }) => theme.palette.grayshade1.main};
   }
 `;
 

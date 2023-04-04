@@ -5,9 +5,10 @@ const actionItemActiveStyles = css`
   ${({ active, theme }) =>
     active &&
     `
-      background-color: ${theme.palette.primary.shade3};
+      background-color: ${theme.palette.bggray.main};
+      border-radius: 29px;
       & > .actionItemChild {
-        color: ${theme.palette.primary.main};
+        color: ${theme.palette.grayshade3.main};
       }
       &:hover > .actionItemChild {
         color: ${theme.palette.neutral.main};
@@ -22,8 +23,13 @@ const actionItemContainerStyles = css`
   margin-bottom: 6px;
   color: ${({ theme }) => theme.palette.neutral.main};
   justify-content: left;
+  @media (max-width: 993px) {
+    justify-content: center;
+    padding: 14px 8px;
+  }
   &:hover:not(:disabled) {
-    background-color: ${({ theme }) => theme.palette.primary.main};
+    border-radius: 29px;
+    background-color: ${({ theme }) => theme.palette.bggray.main};
     color: ${({ theme }) => theme.palette.neutral.main};
   }
   &:disabled {
@@ -53,6 +59,7 @@ export const IconWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 8px;
+  border-radius: 50%;
   ${({ active, theme }) =>
     active
       ? css`

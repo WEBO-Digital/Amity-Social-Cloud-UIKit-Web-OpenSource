@@ -11,10 +11,15 @@ export const Avatar = styled(UIAvatar)`
 
 export const PostCreatorContainer = styled.div`
   padding: 16px 20px 12px 16px;
-  border: 1px solid #edeef2;
   display: flex;
   background: ${({ theme }) => theme.palette.system.background};
-  border-radius: 4px;
+  @media (min-width: 994px) {
+    border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
+  }
+  @media (max-width: 993px) {
+    border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
+    border-bottom: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
+  }
 `;
 
 export const Footer = styled.div`

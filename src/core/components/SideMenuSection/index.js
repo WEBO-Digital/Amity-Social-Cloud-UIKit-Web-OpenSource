@@ -4,8 +4,17 @@ import styled from 'styled-components';
 
 // TODO - confirm colour with design
 const SectionContainer = styled.div`
-  border-top: 1px solid #f7f7f8;
   padding: 0 8px;
+  @media (max-width: 993px) {
+    &.group-list {
+      width: 100%;
+      background-color: ${({ theme }) => theme.palette.bggray.main};
+      margin-top: 15px;
+    }
+    &.active + div {
+      display: block;
+    }
+  }
 `;
 
 const ListHeading = styled.h4`
@@ -15,8 +24,8 @@ const ListHeading = styled.h4`
   margin: 1em 0;
 `;
 
-const SideMenuSection = ({ heading, children }) => (
-  <SectionContainer>
+const SideMenuSection = ({ heading, children, className }) => (
+  <SectionContainer className={className}>
     {heading && <ListHeading>{heading}</ListHeading>}
     {children}
   </SectionContainer>
