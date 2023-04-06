@@ -14,7 +14,8 @@ export const PostContainer = styled(({ className, ...props }) => (
   // padding: 16px;
   // padding-bottom: 8px;
   background: ${({ theme }) => theme.palette.system.background};
-  @media (min-width: 994px) {
+  @media (min-width: 993px) {
+    border-radius: 15px;
     border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
   }
   @media (max-width: 993px) {

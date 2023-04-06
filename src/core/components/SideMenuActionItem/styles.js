@@ -27,6 +27,9 @@ const actionItemContainerStyles = css`
     justify-content: center;
     padding: 14px 8px;
   }
+  @media (min-width: 993px) {
+    padding: 10px 20px;
+  }
   &:hover:not(:disabled) {
     border-radius: 29px;
     background-color: ${({ theme }) => theme.palette.bggray.main};

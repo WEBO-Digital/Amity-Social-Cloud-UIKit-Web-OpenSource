@@ -7,7 +7,7 @@ import { SecondaryButton } from '~/core/components/Button';
 import { ThumbsUp } from '~/icons';
 
 const isLikedStyle = css`
-  color: ${({ theme }) => theme.palette.greenshade.main};
+  color: ${({ theme }) => theme.palette.highlight.main};
   padding: 0 !important;
 `;
 

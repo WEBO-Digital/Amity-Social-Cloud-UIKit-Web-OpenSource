@@ -27,6 +27,7 @@ export const CommentContainer = styled.div`
   display: flex;
   color: black;
   padding-top: 16px;
+  align-items: baseline;
 `;
 
 export const ReplyContainer = styled.div`
@@ -188,4 +189,27 @@ export const CommentEditTextarea = styled(InputText).attrs({ rows: 1, maxRows: 1
   border-radius: 4px;
   resize: none;
   ${({ theme }) => theme.typography.global}
+`;
+
+export const CommentGroup = styled.div`
+  background: ${({ theme }) => theme.palette.system.background};
+  padding: 20px;
+  position: relative;
+  margin-left: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -14px;
+    width: 0;
+    height: 0;
+    border-bottom: 14px solid transparent;
+    border-right: 14px solid ${({ theme }) => theme.palette.system.background};
+  }
+  & > div {
+    background: none;
+    &:last-of-type {
+      padding: 0;
+    }
+  }
 `;

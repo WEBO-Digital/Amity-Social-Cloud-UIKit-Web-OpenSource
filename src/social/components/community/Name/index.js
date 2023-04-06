@@ -36,12 +36,12 @@ const CommunityName = ({
           <Skeleton width={120} style={{ fontSize: 12 }} />
         </Name>
       ) : (
-        <Truncate lines={truncate}>
-          <Name data-qa-anchor={`${dataQaAnchor}-community-name`} title={name}>
-            {!isPublic && <PrivateIcon data-qa-anchor={`${dataQaAnchor}-private-icon`} />}
-            {name}
-          </Name>
-        </Truncate>
+        // <Truncate lines={truncate}>
+        <Name data-qa-anchor={`${dataQaAnchor}-community-name`} title={name}>
+          {!isPublic && <PrivateIcon data-qa-anchor={`${dataQaAnchor}-private-icon`} />}
+          {name}
+        </Name>
+        // </Truncate>
       )}
 
       {!loading && isOfficial && <VerifiedIcon />}

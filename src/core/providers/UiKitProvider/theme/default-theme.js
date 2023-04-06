@@ -17,9 +17,7 @@ const defaultTheme = {
     bgblack: '#141414',
     bordergray: '#252525',
     bggray: '#222b38',
-    greenshade: '#17A99D',
     grayshade1: '#38474b',
-    grayshade2: '#202020',
     grayshade3: '#9baeb5',
     grayshade4: '#a3b0c1',
 

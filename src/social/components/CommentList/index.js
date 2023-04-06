@@ -35,13 +35,9 @@ const CommentList = ({
   );
 
   let prependIcon = null;
-  if (isReplyComment) {
-    prependIcon = (
-      <TabIconContainer>
-        <TabIcon />
-      </TabIconContainer>
-    );
-  }
+  // if (isReplyComment) {
+  //   prependIcon = <TabIconContainer><TabIcon /></TabIconContainer>;
+  // }
 
   return (
     <LoadMore

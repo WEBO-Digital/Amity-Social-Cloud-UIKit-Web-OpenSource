@@ -14,6 +14,9 @@ export const NewsIcon = styled(Newspaper).attrs({ width: 20, height: 20 })``;
 
 export const SearchIcon = styled(Search).attrs({ width: 20, height: 20 })``;
 const SideMenuItemList = styled.div`
+  .icon-wrapper {
+    display: none;
+  }
   @media (max-width: 993px) {
     display: flex;
     flex-wrap: wrap;
@@ -40,13 +43,10 @@ const SideMenuItemList = styled.div`
       width: 100%;
       text-align: center;
     }
-    .icon-wrapper {
-      display: none;
-    }
   }
 `;
 const Searchbar = styled.div`
-  @media (min-width: 994px) {
+  @media (min-width: 993px) {
     display: none;
   }
   cursor: pointer;

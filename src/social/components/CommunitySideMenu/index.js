@@ -5,6 +5,7 @@ import SideMenu from '~/core/components/SideMenu';
 import SideSectionCommunity from '~/social/components/SideSectionCommunity';
 import SideSectionMyCommunity from '~/social/components/SideSectionMyCommunity';
 import UiKitSocialSearch from '~/social/components/SocialSearch';
+import { FormattedMessage } from 'react-intl';
 
 const SocialSearch = styled(UiKitSocialSearch)`
   background: ${({ theme }) => theme.palette.system.background};
@@ -28,11 +29,20 @@ const TabGroup = styled.div`
   @media (min-width: 993px) {
     display: flex;
     flex-wrap: wrap;
-    & > div:first-of-type {
-      order: 2;
-    }
-    & > div:last-of-type {
-      order: 1;
+    margin-bottom: 30px;
+    & > div {
+      width: 100%;
+      &:first-of-type {
+        order: 2;
+      }
+      &:last-of-type {
+        order: 1;
+        border-radius: 15px;
+        & > div > div {
+          background-color: ${({ theme }) => theme.palette.bgblack.main};
+          padding: 2px;
+        }
+      }
     }
   }
 `;

@@ -16,7 +16,6 @@ const CommunityHeader = ({
   loading,
 }) => {
   const { community, communityCategories, file } = useCommunity(communityId);
-
   // TODO: this is temporary - we should use file.fileUrl when supported.
   const fileUrl = useMemo(
     () =>

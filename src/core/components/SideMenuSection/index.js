@@ -10,9 +10,30 @@ const SectionContainer = styled.div`
       width: 100%;
       background-color: ${({ theme }) => theme.palette.bggray.main};
       margin-top: 15px;
+      padding: 0 15px;
+      .no-scroll {
+        width: 100%;
+      }
     }
     &.active + div {
       display: block;
+    }
+  }
+  @media (min-width: 993px) {
+    &.group-list {
+      padding: 0;
+    }
+    .no-scroll {
+      width: 100%;
+    }
+  }
+  @media (min-width: 993px) {
+    .splide__slide {
+      border-bottom: 1px solid ${({ theme }) => theme.palette.bggray.main};
+      padding: 4px;
+      &:first-of-type {
+        border-top: 1px solid ${({ theme }) => theme.palette.bggray.main};
+      }
     }
   }
 `;

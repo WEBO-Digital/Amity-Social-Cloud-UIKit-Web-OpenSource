@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import Skeleton from '~/core/components/Skeleton';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 
 import customizableComponent from '~/core/hocs/customization';
 
@@ -20,9 +22,25 @@ const CommunityHeaderContainer = styled.a.attrs((props) => props)`
   align-items: center;
   color: ${({ theme }) => theme.palette.base.main};
   @media (max-width: 993px) {
-    display: flex;
-    flex-direction: column;
+    display: block;
     color: ${({ theme }) => theme.palette.grayshade4.main};
+    & > div {
+      text-align: center;
+      &:first-of-type {
+        margin: 0 auto;
+      }
+      &:last-of-type {
+        div {
+          padding-right: 0;
+        }
+        svg {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @media (min-width: 993px) {
+    border-radius: 0;
   }
 
   ${({ $loading }) =>
@@ -68,34 +86,61 @@ const UICommunityHeader = ({
   children,
   loading,
 }) => (
-  <CommunityHeaderContainer
-    data-qa-anchor="community-header"
-    isActive={isActive}
-    hasChildren={!!children}
-    $loading={loading}
-    onClick={() => onClick(communityId)}
-  >
-    <CommunityHeaderAvatar
-      avatar={avatarFileUrl}
-      backgroundImage={CommunityImage}
-      loading={loading}
-    />
-    {loading && children ? (
-      <Skeleton style={{ fontSize: 8, maxWidth: 120 }} />
-    ) : (
-      <CommunityName
-        data-qa-anchor="community-header"
-        isActive={isActive}
-        isOfficial={isOfficial}
-        isPublic={isPublic}
-        isSearchResult={isSearchResult}
-        name={name}
-        searchInput={searchInput}
-        loading={loading}
-      />
-    )}
-    {children && <Rest>{children}</Rest>}
-  </CommunityHeaderContainer>
+  <>
+    <Splide
+      options={{
+        rewind: true,
+        gap: '1rem',
+
+        arrows: false,
+        pagination: false,
+        destroy: true,
+        breakpoints: {
+          575: {
+            perPage: 2,
+          },
+          768: {
+            perPage: 4,
+          },
+          993: {
+            destroy: false,
+            perPage: 5,
+          },
+        },
+      }}
+    >
+      <SplideSlide>
+        <CommunityHeaderContainer
+          data-qa-anchor="community-header"
+          isActive={isActive}
+          hasChildren={!!children}
+          $loading={loading}
+          onClick={() => onClick(communityId)}
+        >
+          <CommunityHeaderAvatar
+            avatar={avatarFileUrl}
+            backgroundImage={CommunityImage}
+            loading={loading}
+          />
+          {loading && children ? (
+            <Skeleton style={{ fontSize: 8, maxWidth: 120 }} />
+          ) : (
+            <CommunityName
+              data-qa-anchor="community-header"
+              isActive={isActive}
+              isOfficial={isOfficial}
+              isPublic={isPublic}
+              isSearchResult={isSearchResult}
+              name={name}
+              searchInput={searchInput}
+              loading={loading}
+            />
+          )}
+          {children && <Rest>{children}</Rest>}
+        </CommunityHeaderContainer>
+      </SplideSlide>
+    </Splide>
+  </>
 );
 
 UICommunityHeader.propTypes = {

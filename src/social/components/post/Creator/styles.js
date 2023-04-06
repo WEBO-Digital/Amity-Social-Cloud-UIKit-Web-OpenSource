@@ -13,12 +13,37 @@ export const PostCreatorContainer = styled.div`
   padding: 16px 20px 12px 16px;
   display: flex;
   background: ${({ theme }) => theme.palette.system.background};
-  @media (min-width: 994px) {
+  textarea {
+    background-color: #d7d9dd !important;
+    border-radius: 34px;
+    color: ${({ theme }) => theme.palette.system.background};
+  }
+  @media (min-width: 993px) {
     border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
+    border-radius: 15px;
   }
   @media (max-width: 993px) {
     border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
     border-bottom: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
+  }
+  .post-textboxgroup {
+    display: flex;
+    gap: 0 10px;
+    & > *:empty {
+      display: none;
+    }
+    &:focus-within {
+      border-color: ${({ theme }) => theme.palette.system.background};
+    }
+    & > .post-textboxgroup {
+      width: calc(100% - 45px);
+    }
+    & > button {
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      padding: 0;
+    }
   }
 `;
 
