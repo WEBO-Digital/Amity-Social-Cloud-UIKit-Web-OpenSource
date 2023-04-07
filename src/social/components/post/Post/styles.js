@@ -13,6 +13,8 @@ export const PostContainer = styled(({ className, ...props }) => (
 ))`
   // padding: 16px;
   // padding-bottom: 8px;
+  max-width: 600px;
+  margin: 0 auto;
   background: ${({ theme }) => theme.palette.system.background};
   @media (min-width: 993px) {
     border-radius: 15px;

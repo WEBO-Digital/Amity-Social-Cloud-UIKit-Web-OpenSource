@@ -78,6 +78,7 @@ export const RemoveButton = styled(Button).attrs({
   position: absolute;
   top: 0.5em;
   right: 0.5em;
+  width: 40px;
 `;
 
 export const CircleIcon = styled(ExclamationCircle).attrs({ width: 24, height: 24 })`
@@ -94,6 +95,7 @@ export const RetryButton = styled(Button).attrs({
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+  width: 40px;
 `;
 
 export const ButtonContainer = styled.div`

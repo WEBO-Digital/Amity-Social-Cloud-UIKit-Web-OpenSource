@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   height: 100%;
-  max-width: 550px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 28px 0;
+  padding: 26px 0;
   overflow-y: auto;
   ::-webkit-scrollbar {
     width: 10px;

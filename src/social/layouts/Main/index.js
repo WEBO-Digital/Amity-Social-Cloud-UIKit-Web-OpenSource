@@ -12,7 +12,7 @@ const Container = styled.div`
   grid-gap: 0 20px;
   width: 100%;
   height: 100%;
-  padding: 0 20px 0 0;
+  padding: 0 0 0 26px;
   /* background: #f7f7f8; */
   // background-image: url(${feedBg});
   // background-position: center;
@@ -31,8 +31,22 @@ const Main = styled.div`
   overflow: auto;
   width: 100%;
   min-width: 20rem;
-  max-width: 90.75rem;
+  max-width: 100%;
   margin: 0 auto;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;
 
 const Side = styled.div`

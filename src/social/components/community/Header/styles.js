@@ -17,7 +17,7 @@ const CommunityHeaderContainer = styled.a.attrs((props) => props)`
   grid-template-columns: min-content auto;
   grid-template-rows: min-content min-content;
   grid-gap: 0 0.75em;
-  padding: 0.5em;
+  padding: 10px 8px 8px;
   border-radius: 4px;
   align-items: center;
   color: ${({ theme }) => theme.palette.base.main};

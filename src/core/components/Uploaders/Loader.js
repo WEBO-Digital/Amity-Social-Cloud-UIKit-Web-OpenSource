@@ -9,7 +9,7 @@ const MIN_FILES_LIMIT = 1;
 
 export const FileLoaderContainer = styled.label`
   cursor: pointer;
-  background: rgb(235 236 239 / 60%);
+  background: ${({ theme }) => theme.palette.grayshade1.main};
   transition: background 0.1s;
   border-radius: 50%;
   width: 2rem;
@@ -21,7 +21,7 @@ export const FileLoaderContainer = styled.label`
   &:hover,
   &:focus,
   &:active {
-    background: rgb(235 236 239);
+    background: ${({ theme }) => theme.palette.grayshade3.main};
   }
 
   &.disabled {

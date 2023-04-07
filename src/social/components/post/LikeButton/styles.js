@@ -9,6 +9,9 @@ import { ThumbsUp } from '~/icons';
 const isLikedStyle = css`
   color: ${({ theme }) => theme.palette.highlight.main};
   padding: 0 !important;
+  svg path {
+    fill: ${({ theme }) => theme.palette.highlight.main};
+  }
 `;
 
 export const StyledLikeButton = styled(SecondaryButton)`

@@ -302,6 +302,7 @@ const PostCreatorBar = ({
           loadMoreMentionees={() => queryMentionees(mentionText)}
           className="post-textboxgroup"
           // Need to work on this, possible conflict incoming
+          prepe
           append={
             <>
               <UploadsContainer>
@@ -327,14 +328,13 @@ const PostCreatorBar = ({
                   onError={setError}
                 />
               </UploadsContainer>
-              <PostButton
+              {/* <PostButton
                 disabled={isDisabled}
                 data-qa-anchor="post-creator-post-button"
                 onClick={onCreatePost}
               >
-                {/* <FormattedMessage id="post" /> */}
                 <PostArrowIcon />
-              </PostButton>
+              </PostButton> */}
             </>
           }
           onChange={({ text, plainText: plainTextVal, lastMentionText, mentions }) => {
@@ -372,13 +372,14 @@ const PostCreatorBar = ({
               <PollIcon />
             </FileLoaderContainer>
           </PollButton>
-          {/* <PostButton
+          <PostButton
             disabled={isDisabled}
             data-qa-anchor="post-creator-post-button"
             onClick={onCreatePost}
           >
-            <FormattedMessage id="post" />
-          </PostButton> */}
+            {/* <FormattedMessage id="post" /> */}
+            <PostArrowIcon />
+          </PostButton>
         </Footer>
       </PostContainer>
     </PostCreatorContainer>

@@ -13,6 +13,8 @@ export const PostCreatorContainer = styled.div`
   padding: 16px 20px 12px 16px;
   display: flex;
   background: ${({ theme }) => theme.palette.system.background};
+  max-width: 600px;
+  margin: 0 auto;
   textarea {
     background-color: #d7d9dd !important;
     border-radius: 34px;
@@ -27,22 +29,11 @@ export const PostCreatorContainer = styled.div`
     border-bottom: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
   }
   .post-textboxgroup {
-    display: flex;
-    gap: 0 10px;
     & > *:empty {
       display: none;
     }
     &:focus-within {
       border-color: ${({ theme }) => theme.palette.system.background};
-    }
-    & > .post-textboxgroup {
-      width: calc(100% - 45px);
-    }
-    & > button {
-      border-radius: 50%;
-      width: 33px;
-      height: 33px;
-      padding: 0;
     }
   }
 `;
@@ -63,12 +54,15 @@ export const PostContainer = styled.div`
 `;
 
 export const PostButton = styled(PrimaryButton)`
-  padding: 10px 16px;
   margin-left: auto;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  padding: 0;
 `;
 
 export const UploadsContainer = styled.div`
-  padding: 0 12px;
+  margin-top: 20px;
 `;
 
 export const PostInputText = styled(InputText)`
@@ -88,4 +82,8 @@ export const PollButton = styled.button`
   padding: 0;
 `;
 
-export const PollIcon = styled(Poll)``;
+export const PollIcon = styled(Poll)`
+  path {
+    fill: #ffffff;
+  }
+`;

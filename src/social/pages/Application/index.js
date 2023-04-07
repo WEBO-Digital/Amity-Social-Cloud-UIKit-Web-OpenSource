@@ -27,7 +27,7 @@ const StyledCommunitySideMenu = styled(CommunitySideMenu)`
     width: 100%;
   }
   @media (min-width: 993px) {
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 52px);
   }
 `;
 

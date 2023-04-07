@@ -13,6 +13,6 @@ export default styled.div`
   @media (min-width: 993px) {
     background-color: ${({ theme }) => theme.palette.system.background};
     border-radius: 15px;
-    margin-top: 28px;
+    margin-top: 26px;
   }
 `;
