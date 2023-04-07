@@ -27,12 +27,27 @@ export const LoadMoreButton = styled(Button)`
 
   &.reply-button {
     width: fit-content;
-    background-color: ${({ theme }) => theme.palette.system.borders};
-    color: ${({ theme }) => theme.palette.base.shade1};
+    // background-color: ${({ theme }) => theme.palette.system.borders};
+    // color: ${({ theme }) => theme.palette.base.shade1};
     margin: 12px 0px 16px 3rem;
     padding: 5px 12px;
-    border-radius: 8px;
+    border-radius: 0 11px 11px 11px;
     ${({ theme }) => theme.typography.captionBold}
+    border: none;
+    background-color: #797979;
+    color: #141414;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-bottom: 10px solid transparent;
+      border-right: 14px solid #797979;
+      transform: rotate(180deg);
+    }
   }
 `;
 

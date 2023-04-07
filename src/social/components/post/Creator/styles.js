@@ -11,10 +11,31 @@ export const Avatar = styled(UIAvatar)`
 
 export const PostCreatorContainer = styled.div`
   padding: 16px 20px 12px 16px;
-  border: 1px solid #edeef2;
   display: flex;
   background: ${({ theme }) => theme.palette.system.background};
-  border-radius: 4px;
+  max-width: 600px;
+  margin: 0 auto;
+  textarea {
+    background-color: #d7d9dd !important;
+    border-radius: 34px;
+    color: ${({ theme }) => theme.palette.system.background};
+  }
+  @media (min-width: 993px) {
+    border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
+    border-radius: 15px;
+  }
+  @media (max-width: 993px) {
+    border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
+    border-bottom: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
+  }
+  .post-textboxgroup {
+    & > *:empty {
+      display: none;
+    }
+    &:focus-within {
+      border-color: ${({ theme }) => theme.palette.system.background};
+    }
+  }
 `;
 
 export const Footer = styled.div`
@@ -33,12 +54,15 @@ export const PostContainer = styled.div`
 `;
 
 export const PostButton = styled(PrimaryButton)`
-  padding: 10px 16px;
   margin-left: auto;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  padding: 0;
 `;
 
 export const UploadsContainer = styled.div`
-  padding: 0 12px;
+  margin-top: 20px;
 `;
 
 export const PostInputText = styled(InputText)`
@@ -58,4 +82,8 @@ export const PollButton = styled.button`
   padding: 0;
 `;
 
-export const PollIcon = styled(Poll)``;
+export const PollIcon = styled(Poll)`
+  path {
+    fill: #ffffff;
+  }
+`;

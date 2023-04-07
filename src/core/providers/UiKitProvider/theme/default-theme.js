@@ -14,6 +14,12 @@ const defaultTheme = {
     neutral: '#f6f6f6',
     // highlight: '#1054DE',
     highlight: '#17a99d',
+    bgblack: '#141414',
+    bordergray: '#252525',
+    bggray: '#222b38',
+    grayshade1: '#38474b',
+    grayshade3: '#9baeb5',
+    grayshade4: '#a3b0c1',
 
     system: {
       // borders: '#ebecef',

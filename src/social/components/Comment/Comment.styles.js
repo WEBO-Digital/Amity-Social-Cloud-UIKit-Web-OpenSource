@@ -27,6 +27,7 @@ import {
   CommentEditTextarea,
   ButtonContainer,
   EditedMark,
+  CommentGroup,
 } from './styles';
 
 const StyledComment = ({
@@ -70,57 +71,59 @@ const StyledComment = ({
     <>
       <Avatar avatar={authorAvatar} backgroundImage={UserImage} />
       <Content>
-        <Truncate
-          ellipsis={
-            <span>
-              ...
-              <CommentDate date={createdAt} />
-              {editedAt - createdAt > 0 && (
-                <EditedMark>
-                  <FormattedMessage id="comment.edited" />
-                </EditedMark>
-              )}
-            </span>
-          }
-          lines={2}
-        >
-          <CommentHeader>
-            <AuthorName>{authorName}</AuthorName>
-            <Truncate.Atom>
-              {isBanned && <BanIcon css="margin-left: 0.265rem; margin-top: 1px;" />}
-              <CommentDate date={createdAt} />
-              {editedAt - createdAt > 0 && (
-                <EditedMark>
-                  <FormattedMessage id="comment.edited" />
-                </EditedMark>
-              )}
-            </Truncate.Atom>
-          </CommentHeader>
-        </Truncate>
+        <CommentGroup>
+          <Truncate
+            ellipsis={
+              <span>
+                ...
+                <CommentDate date={createdAt} />
+                {editedAt - createdAt > 0 && (
+                  <EditedMark>
+                    <FormattedMessage id="comment.edited" />
+                  </EditedMark>
+                )}
+              </span>
+            }
+            lines={2}
+          >
+            <CommentHeader>
+              <AuthorName>{authorName}</AuthorName>
+              <Truncate.Atom>
+                {isBanned && <BanIcon css="margin-left: 0.265rem; margin-top: 1px;" />}
+                <CommentDate date={createdAt} />
+                {editedAt - createdAt > 0 && (
+                  <EditedMark>
+                    <FormattedMessage id="comment.edited" />
+                  </EditedMark>
+                )}
+              </Truncate.Atom>
+            </CommentHeader>
+          </Truncate>
 
-        <ConditionalRender condition={isEditing}>
-          <CommentEditContainer>
-            <CommentEditTextarea
-              multiline
-              mentionAllowed
-              value={markup}
-              queryMentionees={queryMentionees}
-              onChange={onChange}
-            />
-            <ButtonContainer>
-              <Button data-qa-anchor="comment-cancel-edit-button" onClick={cancelEditing}>
-                <FormattedMessage id="cancel" />
-              </Button>
-              <PrimaryButton
-                data-qa-anchor="comment-save-edit-button"
-                onClick={() => handleEdit(text)}
-              >
-                <FormattedMessage id="save" />
-              </PrimaryButton>
-            </ButtonContainer>
-          </CommentEditContainer>
-          <CommentText text={text} mentionees={mentionees} metadata={metadata} />
-        </ConditionalRender>
+          <ConditionalRender condition={isEditing}>
+            <CommentEditContainer>
+              <CommentEditTextarea
+                multiline
+                mentionAllowed
+                value={markup}
+                queryMentionees={queryMentionees}
+                onChange={onChange}
+              />
+              <ButtonContainer>
+                <Button data-qa-anchor="comment-cancel-edit-button" onClick={cancelEditing}>
+                  <FormattedMessage id="cancel" />
+                </Button>
+                <PrimaryButton
+                  data-qa-anchor="comment-save-edit-button"
+                  onClick={() => handleEdit(text)}
+                >
+                  <FormattedMessage id="save" />
+                </PrimaryButton>
+              </ButtonContainer>
+            </CommentEditContainer>
+            <CommentText text={text} mentionees={mentionees} metadata={metadata} />
+          </ConditionalRender>
+        </CommentGroup>
 
         {!isEditing && (canLike || canReply || options.length > 0) && (
           <InteractionBar>

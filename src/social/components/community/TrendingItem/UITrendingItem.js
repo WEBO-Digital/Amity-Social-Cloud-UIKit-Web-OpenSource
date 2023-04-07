@@ -15,10 +15,13 @@ const ItemContainer = styled.div`
   counter-increment: trending;
   min-width: 425px;
   height: 118px;
-  border: 1px solid #ebecef;
+  border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
   border-radius: 8px;
   background: ${({ theme }) => theme.palette.system.background};
   overflow: hidden;
+  @media (max-width: 480px) {
+    min-width: 100%;
+  }
 `;
 
 const Cover = styled.div`

@@ -11,17 +11,24 @@ export const OptionMenu = styled(UIOptionMenu)`
 export const PostContainer = styled(({ className, ...props }) => (
   <div className={cx('post', className)} {...props} />
 ))`
-  padding: 16px;
-  padding-bottom: 8px;
+  // padding: 16px;
+  // padding-bottom: 8px;
+  max-width: 600px;
+  margin: 0 auto;
   background: ${({ theme }) => theme.palette.system.background};
-  border: 1px solid #edeef2;
-  border-radius: 4px;
+  @media (min-width: 993px) {
+    border-radius: 15px;
+    border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
+  }
+  @media (max-width: 993px) {
+    border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
+  }
 `;
 
 export const PostHeadContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
+  padding: 16px;
 `;
 
 export const ReviewButtonsContainer = styled.div`

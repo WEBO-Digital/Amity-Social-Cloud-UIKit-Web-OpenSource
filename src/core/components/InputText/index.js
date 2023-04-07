@@ -13,8 +13,8 @@ const Container = styled.div`
   flex-wrap: wrap;
   min-width: 1em;
   background: ${({ theme }) => theme.palette.system.background};
-  border: 1px solid #e3e4e8;
-  border-radius: 4px;
+  border: 1px solid ${({ theme }) => theme.palette.bordergray.main};
+  border-radius: 34px;
   transition: background 0.2s, border-color 0.2s;
 
   ${({ theme }) => theme.typography.global}

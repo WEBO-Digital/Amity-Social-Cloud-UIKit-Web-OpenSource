@@ -15,6 +15,7 @@ import {
   InteractionBar,
   CommentIcon,
   NoInteractionMessage,
+  CommentBar,
 } from './styles';
 import CommentList from '~/social/components/CommentList';
 
@@ -54,11 +55,13 @@ const UIEngagementBar = ({
             <CommentIcon /> <FormattedMessage id="comment" />
           </SecondaryButton>
         </InteractionBar>
-        <CommentList
-          referenceId={postId}
-          referenceType={CommentReferenceType.Post}
-          last={COMMENTS_PER_PAGE}
-        />
+        <CommentBar>
+          <CommentList
+            referenceId={postId}
+            referenceType={CommentReferenceType.Post}
+            last={COMMENTS_PER_PAGE}
+          />
+        </CommentBar>
 
         {isComposeBarDisplayed && (
           <CommentComposeBar postId={postId} postType={targetType} onSubmit={handleAddComment} />

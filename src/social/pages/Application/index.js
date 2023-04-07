@@ -23,6 +23,12 @@ const ApplicationContainer = styled.div`
 
 const StyledCommunitySideMenu = styled(CommunitySideMenu)`
   min-height: 100%;
+  @media (max-width: 993px) {
+    width: 100%;
+  }
+  @media (min-width: 993px) {
+    min-height: calc(100vh - 52px);
+  }
 `;
 
 const Community = () => {

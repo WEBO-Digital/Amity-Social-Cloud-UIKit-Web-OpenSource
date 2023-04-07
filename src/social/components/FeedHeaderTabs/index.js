@@ -7,7 +7,7 @@ import UITabs from '~/core/components/Tabs';
 const FeedHeaderTabs = styled(UITabs)`
   background: ${({ theme }) => theme.palette.system.background};
   border-radius: 4px 4px 0 0;
-  border: 1px solid #edeef2;
+  border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
   margin-bottom: 12px;
 `;
 

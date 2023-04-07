@@ -6,7 +6,9 @@ import Search from '~/icons/Search';
 export const SearchIconContainer = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding: 10px 17px;
+  border-radius: 34px;
+  background-color: ${({ theme }) => theme.palette.bggray.main};
 `;
 
 export const SearchIcon = styled(Search).attrs({ width: 16, height: 16 })`

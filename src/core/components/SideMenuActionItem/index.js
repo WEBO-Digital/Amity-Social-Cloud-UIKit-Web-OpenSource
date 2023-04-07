@@ -28,7 +28,11 @@ const SideMenuActionItem = ({
       disabled={disabled}
       onClick={onClick}
     >
-      {icon && <IconWrapper active={active}>{icon}</IconWrapper>}
+      {icon && (
+        <IconWrapper className="icon-wrapper" active={active}>
+          {icon}
+        </IconWrapper>
+      )}
       <span className="actionItemChild">{children}</span>
     </ActionItemContainer>
   );

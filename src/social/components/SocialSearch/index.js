@@ -94,7 +94,7 @@ const SocialSearch = ({ className, sticky = false, searchBy }) => {
             className={className}
             getPagination={getPagination}
             placeholder={placeholder}
-            prepend={
+            append={
               <SearchIconContainer>
                 <SearchIcon />
               </SearchIconContainer>

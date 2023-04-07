@@ -15,6 +15,7 @@ export const PostContent = styled.div`
   color: ${({ theme }) => theme.palette.neutral.main};
   white-space: pre-wrap;
   ${({ theme }) => theme.typography.body}
+  margin: 0 16px 16px;
 `;
 
 export const ReadMoreButton = styled(Button).attrs({ variant: 'secondary' })`

@@ -19,6 +19,9 @@ export const NameContainer = styled.div`
   display: flex;
   align-items: center;
   overflow: hidden;
+  @media (max-width: 993px) {
+    display: block;
+  }
   ${({ theme, isActive, isTitle }) => css`
     ${theme.typography.bodyBold}
     ${isActive &&

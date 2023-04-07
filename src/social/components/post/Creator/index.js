@@ -27,6 +27,7 @@ import UploaderButtons from './components/UploaderButtons';
 import ImagesUploaded from './components/ImagesUploaded';
 import VideosUploaded from './components/VideosUploaded';
 import FilesUploaded from './components/FilesUploaded';
+import PostArrowIcon from '~/icons/PostArrow';
 
 import { createPost, showPostCreatedNotification } from './utils';
 import {
@@ -290,7 +291,7 @@ const PostCreatorBar = ({
         CurrentTargetAvatar
       )}
 
-      <PostContainer>
+      <PostContainer className="post-container">
         <PostInputText
           data-qa-anchor="post-creator-textarea"
           multiline
@@ -299,31 +300,42 @@ const PostCreatorBar = ({
           mentionAllowed
           queryMentionees={queryMentionees}
           loadMoreMentionees={() => queryMentionees(mentionText)}
+          className="post-textboxgroup"
           // Need to work on this, possible conflict incoming
+          prepe
           append={
-            <UploadsContainer>
-              <ImagesUploaded
-                files={incomingImages}
-                uploadLoading={uploadLoading}
-                onLoadingChange={setUploadLoading}
-                onChange={setPostImages}
-                onError={setError}
-              />
-              <VideosUploaded
-                files={incomingVideos}
-                uploadLoading={uploadLoading}
-                onLoadingChange={setUploadLoading}
-                onChange={setPostVideos}
-                onError={setError}
-              />
-              <FilesUploaded
-                files={incomingFiles}
-                uploadLoading={uploadLoading}
-                onLoadingChange={setUploadLoading}
-                onChange={setPostFiles}
-                onError={setError}
-              />
-            </UploadsContainer>
+            <>
+              <UploadsContainer>
+                <ImagesUploaded
+                  files={incomingImages}
+                  uploadLoading={uploadLoading}
+                  onLoadingChange={setUploadLoading}
+                  onChange={setPostImages}
+                  onError={setError}
+                />
+                <VideosUploaded
+                  files={incomingVideos}
+                  uploadLoading={uploadLoading}
+                  onLoadingChange={setUploadLoading}
+                  onChange={setPostVideos}
+                  onError={setError}
+                />
+                <FilesUploaded
+                  files={incomingFiles}
+                  uploadLoading={uploadLoading}
+                  onLoadingChange={setUploadLoading}
+                  onChange={setPostFiles}
+                  onError={setError}
+                />
+              </UploadsContainer>
+              {/* <PostButton
+                disabled={isDisabled}
+                data-qa-anchor="post-creator-post-button"
+                onClick={onCreatePost}
+              >
+                <PostArrowIcon />
+              </PostButton> */}
+            </>
           }
           onChange={({ text, plainText: plainTextVal, lastMentionText, mentions }) => {
             // Disrupt the flow
@@ -365,7 +377,8 @@ const PostCreatorBar = ({
             data-qa-anchor="post-creator-post-button"
             onClick={onCreatePost}
           >
-            <FormattedMessage id="post" />
+            {/* <FormattedMessage id="post" /> */}
+            <PostArrowIcon />
           </PostButton>
         </Footer>
       </PostContainer>

@@ -9,8 +9,7 @@ export const Avatar = styled(UIAvatar)`
 `;
 
 export const CommentComposeBarContainer = styled.div`
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px;
   background: ${({ theme }) => theme.palette.system.background};
   display: flex;
   align-items: center;

@@ -23,7 +23,7 @@ export const OptionMenu = styled(UIOptionMenu)`
 `;
 
 export const Container = styled.div`
-  border: 1px solid #ebecef;
+  border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
   border-radius: 8px;
   background: ${({ theme }) => theme.palette.system.background};
   flex-shrink: 0;
@@ -34,6 +34,7 @@ export const Container = styled.div`
 export const Cover = styled.div`
   padding-top: 56.25%;
   position: relative;
+  border-radius: 8px 8px 0 0;
 
   ${({ backgroundImage, theme }) => `
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) -4.5%, rgba(0, 0, 0, 0) 77.17%), ${

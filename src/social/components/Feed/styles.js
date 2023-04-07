@@ -12,8 +12,9 @@ export const FeedScrollContainer = styled(InfiniteScroll)`
   }
 
   & .load-more {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
   }
 `;
 
