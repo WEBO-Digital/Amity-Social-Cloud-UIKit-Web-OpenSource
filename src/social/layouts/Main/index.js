@@ -14,7 +14,6 @@ const Container = styled.div`
   height: 100%;
   padding: 0 0 0 26px;
   /* background: #f7f7f8; */
-  // background-image: url(${feedBg});
   // background-position: center;
   // background-repeat: no-repeat;
   // background-size: cover;

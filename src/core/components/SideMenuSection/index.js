@@ -55,6 +55,7 @@ const SideMenuSection = ({ heading, children, className }) => (
 SideMenuSection.propTypes = {
   heading: PropTypes.node,
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 export default SideMenuSection;

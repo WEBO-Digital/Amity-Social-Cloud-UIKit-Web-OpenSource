@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
@@ -53,7 +52,7 @@ const Searchbar = styled.div`
 `;
 
 const SideSectionCommunity = ({ shouldHideExplore, children }) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = React.useState(false);
   const { onChangePage, page } = useNavigation();
   const handleToggle = () => {
     setVisible((current) => !current);
