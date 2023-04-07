@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import backgroundImage from '~/images/bg.png';
 
 export default styled.div`
   width: 280px;

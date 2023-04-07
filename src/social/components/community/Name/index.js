@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Truncate from 'react-truncate-markup';
 import Highlight from '~/core/components/Highlight';
 import Skeleton from '~/core/components/Skeleton';
 import customizableComponent from '~/core/hocs/customization';
@@ -23,7 +22,6 @@ const CommunityName = ({
   searchInput,
   className,
   loading,
-  truncate,
 }) => {
   if (isSearchResult) {
     return <Highlight text={name || ''} query={searchInput} />;
@@ -60,7 +58,6 @@ CommunityName.propTypes = {
   searchInput: PropTypes.string,
   className: PropTypes.string,
   loading: PropTypes.bool,
-  truncate: PropTypes.number,
 };
 
 CommunityName.defaultProps = {
@@ -74,7 +71,6 @@ CommunityName.defaultProps = {
   searchInput: '',
   className: null,
   loading: false,
-  truncate: 1,
 };
 
 export default customizableComponent('CommunityName', CommunityName);

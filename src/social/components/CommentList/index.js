@@ -7,8 +7,6 @@ import useCommentsQuery from '~/social/hooks/useCommentsQuery';
 import Comment from '~/social/components/Comment';
 import LoadMore from '~/social/components/LoadMore';
 
-import { TabIcon, TabIconContainer } from './styles';
-
 const CommentList = ({
   parentId,
   referenceId,
@@ -34,7 +32,7 @@ const CommentList = ({
     <FormattedMessage id="collapsible.viewMoreComments" />
   );
 
-  let prependIcon = null;
+  const prependIcon = null;
   // if (isReplyComment) {
   //   prependIcon = <TabIconContainer><TabIcon /></TabIconContainer>;
   // }
