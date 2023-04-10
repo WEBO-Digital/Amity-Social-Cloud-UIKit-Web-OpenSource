@@ -75,7 +75,7 @@ const UICommunityList = ({
         >
           {!loading &&
             communityIds.map((communityId) => (
-              <SplideSlide>
+              <SplideSlide key={communityId}>
                 <CommunityHeader
                   key={communityId}
                   communityId={communityId}
