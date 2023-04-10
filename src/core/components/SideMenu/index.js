@@ -6,12 +6,12 @@ export default styled.div`
   background-color: ${({ theme }) => theme.palette.bgblack.main};
   ${({ theme }) => theme.typography.title}
   border: 1px solid ${({ theme }) => theme.palette.bggray.main};
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     border: none;
   }
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     background-color: ${({ theme }) => theme.palette.system.background};
     border-radius: 15px;
-    margin-top: 26px;
+    margin: 26px 0;
   }
 `;

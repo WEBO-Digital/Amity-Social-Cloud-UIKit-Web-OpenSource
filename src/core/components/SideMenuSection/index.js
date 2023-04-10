@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // TODO - confirm colour with design
 const SectionContainer = styled.div`
   padding: 0 8px;
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     &.group-list {
       width: 100%;
       background-color: ${({ theme }) => theme.palette.bggray.main};
@@ -19,7 +19,7 @@ const SectionContainer = styled.div`
       display: block;
     }
   }
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     &.group-list {
       padding: 0;
     }
@@ -27,7 +27,7 @@ const SectionContainer = styled.div`
       width: 100%;
     }
   }
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     .splide__slide {
       border-bottom: 1px solid ${({ theme }) => theme.palette.bggray.main};
       padding: 4px;

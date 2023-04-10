@@ -16,11 +16,11 @@ export const PostContainer = styled(({ className, ...props }) => (
   max-width: 600px;
   margin: 0 auto;
   background: ${({ theme }) => theme.palette.system.background};
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     border-radius: 15px;
     border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
   }
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
   }
 `;

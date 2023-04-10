@@ -14,7 +14,7 @@ import ExclamationCircle from '~/icons/ExclamationCircle';
 export const FileContainer = styled.a`
   display: block;
   position: relative;
-  border: 1px solid ${({ theme }) => theme.palette.base.shade4};
+  border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
   border-radius: 4px;
   overflow: hidden;
   text-decoration: none;

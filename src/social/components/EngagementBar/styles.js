@@ -18,14 +18,14 @@ export const Counters = styled.div`
 export const CommentBar = styled.div`
   background: ${({ theme }) => theme.palette.bgblack.main};
   padding: 0 16px;
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     border-radius: 0 0 15px 15px;
   }
 `;
 
 export const InteractionBar = styled.div`
   display: flex;
-  margin: 16px;
+  padding: 16px;
   gap: 1rem;
   & > button {
     background-color: transparent;

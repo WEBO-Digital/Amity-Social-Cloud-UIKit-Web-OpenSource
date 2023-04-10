@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 
 import CommunityHeader from '~/social/components/community/Header';
 import LoadMore from '~/social/components/LoadMore';
@@ -28,7 +30,7 @@ const UICommunityList = ({
   const classNames = [communityIds.length < 4 && 'no-scroll', className].filter(Boolean).join(' ');
 
   function renderLoadingSkeleton() {
-    return new Array(5).fill(1).map((x, index) => <CommunityHeader key={index} loading />);
+    return new Array(1).fill(1).map((x, index) => <CommunityHeader key={index} loading />);
   }
 
   return (
@@ -49,19 +51,42 @@ const UICommunityList = ({
         )}
 
         {loading && renderLoadingSkeleton()}
-
-        {!loading &&
-          communityIds.map((communityId) => (
-            <CommunityHeader
-              key={communityId}
-              communityId={communityId}
-              isActive={communityId === activeCommunity}
-              isSearchResult={isSearchList}
-              searchInput={searchInput}
-              onClick={onClickCommunity}
-            />
-          ))}
-
+        <Splide
+          options={{
+            rewind: true,
+            gap: '1rem',
+            autoHeight: true,
+            arrows: false,
+            pagination: false,
+            destroy: true,
+            breakpoints: {
+              575: {
+                perPage: 2,
+              },
+              768: {
+                perPage: 4,
+              },
+              960: {
+                destroy: false,
+                perPage: 5,
+              },
+            },
+          }}
+        >
+          {!loading &&
+            communityIds.map((communityId) => (
+              <SplideSlide key={communityId}>
+                <CommunityHeader
+                  key={communityId}
+                  communityId={communityId}
+                  isActive={communityId === activeCommunity}
+                  isSearchResult={isSearchList}
+                  searchInput={searchInput}
+                  onClick={onClickCommunity}
+                />
+              </SplideSlide>
+            ))}
+        </Splide>
         {loadingMore && renderLoadingSkeleton()}
       </LoadMore>
     </CommunityScrollContainer>

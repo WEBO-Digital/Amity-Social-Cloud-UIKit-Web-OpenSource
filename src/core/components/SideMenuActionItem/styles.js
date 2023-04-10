@@ -23,11 +23,11 @@ const actionItemContainerStyles = css`
   margin-bottom: 6px;
   color: ${({ theme }) => theme.palette.neutral.main};
   justify-content: left;
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     justify-content: center;
     padding: 14px 8px;
   }
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     padding: 10px 20px;
   }
   &:hover:not(:disabled) {

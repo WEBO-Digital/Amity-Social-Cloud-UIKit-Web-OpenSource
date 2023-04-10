@@ -17,8 +17,8 @@ export const ImageContainer = styled.div`
   min-height: 2em;
   width: 100%;
   height: 100%;
-  border: ${({ theme, border }) => border && `1px solid ${theme.palette.base.shade4}`};
-  border-radius: 4px;
+  // border: ${({ theme, border }) => border && `1px solid ${theme.palette.grayshade1.main}`};
+  // border-radius: 4px;
   overflow: hidden;
 
   .darken {
