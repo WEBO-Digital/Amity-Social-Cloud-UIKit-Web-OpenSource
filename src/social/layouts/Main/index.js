@@ -18,10 +18,11 @@ const Container = styled.div`
   // background-repeat: no-repeat;
   // background-size: cover;
   background-color: ${({ theme }) => theme.palette.bgblack.main};
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     display: flex;
     flex-direction: column-reverse;
     padding: 0;
+    height: unset;
   }
 `;
 
@@ -51,7 +52,7 @@ const Main = styled.div`
 const Side = styled.div`
   grid-area: side;
   overflow: auto;
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     overflow: unset;
   }
 `;

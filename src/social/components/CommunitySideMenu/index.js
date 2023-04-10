@@ -9,7 +9,7 @@ import UiKitSocialSearch from '~/social/components/SocialSearch';
 const SocialSearch = styled(UiKitSocialSearch)`
   background: ${({ theme }) => theme.palette.system.background};
   padding: 0.5rem;
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     display: none;
     position: absolute;
     left: 0;
@@ -20,12 +20,12 @@ const SocialSearch = styled(UiKitSocialSearch)`
 `;
 const TabGroup = styled.div`
   position: relative;
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     h4 {
       text-align: center;
     }
   }
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;

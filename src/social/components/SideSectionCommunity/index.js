@@ -16,7 +16,7 @@ const SideMenuItemList = styled.div`
   .icon-wrapper {
     display: none;
   }
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     display: flex;
     flex-wrap: wrap;
     max-width: 890px;
@@ -45,7 +45,7 @@ const SideMenuItemList = styled.div`
   }
 `;
 const Searchbar = styled.div`
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     display: none;
   }
   cursor: pointer;

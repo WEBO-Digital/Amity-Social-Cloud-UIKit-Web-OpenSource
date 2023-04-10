@@ -19,7 +19,7 @@ export const NameContainer = styled.div`
   display: flex;
   align-items: center;
   overflow: hidden;
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     display: block;
   }
   ${({ theme, isActive, isTitle }) => css`

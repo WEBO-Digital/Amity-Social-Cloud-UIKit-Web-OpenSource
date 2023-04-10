@@ -20,11 +20,11 @@ export const PostCreatorContainer = styled.div`
     border-radius: 34px;
     color: ${({ theme }) => theme.palette.system.background};
   }
-  @media (min-width: 993px) {
+  @media (min-width: 961px) {
     border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
     border-radius: 15px;
   }
-  @media (max-width: 993px) {
+  @media (max-width: 960px) {
     border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
     border-bottom: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
   }
