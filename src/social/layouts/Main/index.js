@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import customizableComponent from '~/core/hocs/customization';
 
 const Container = styled.div`
-  overflow: hidden;
+  overflow: unset;
   display: grid;
   grid-template-areas: 'side main' 'none main';
   grid-template-columns: min-content auto;
@@ -33,6 +33,9 @@ const Main = styled.div`
   min-width: 20rem;
   max-width: 100%;
   margin: 0 auto;
+  @media (min-width: 961px) {
+    padding-right: 26px;
+  }
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -52,8 +55,16 @@ const Main = styled.div`
 const Side = styled.div`
   grid-area: side;
   overflow: auto;
+  border-radius: 15px;
+  margin: 26px 0;
   @media (max-width: 960px) {
     overflow: unset;
+    margin-bottom: 0;
+  }
+  @media (min-width: 961px) {
+    height: calc(100vh - 154px);
+    position: sticky;
+    top: 0;
   }
 `;
 

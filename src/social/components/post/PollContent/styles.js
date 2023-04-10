@@ -5,7 +5,7 @@ export const VoteItemContainer = styled.div`
   border-radius: 4px;
   border: 1px solid
     ${({ theme, checked }) => (checked ? theme.palette.primary.main : theme.palette.base.shade4)};
-  margin-bottom: 12px;
+  margin: 0 16px 12px;
 `;
 
 export const ResultItemContainer = styled.div`
@@ -18,7 +18,7 @@ export const ResultItemContainer = styled.div`
     border-left: 5px solid ${theme.palette.primary.main};
   `};
   border-radius: 4px;
-  margin-bottom: 12px;
+  margin: 0 16px 12px;
 
   > *:not(:last-child) {
     margin-top: 8px;
@@ -36,6 +36,7 @@ export const Text = styled.div`
 export const PollInformation = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 16px;
 
   :last-child {
     margin-left: auto;

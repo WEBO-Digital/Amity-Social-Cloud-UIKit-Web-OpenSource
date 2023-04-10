@@ -18,7 +18,7 @@ export const Counters = styled.div`
 export const CommentBar = styled.div`
   background: ${({ theme }) => theme.palette.bgblack.main};
   padding: 0 16px;
-  @media (min-width: 961px) {
+  @media (min-width: 600px) {
     border-radius: 0 0 15px 15px;
   }
 `;

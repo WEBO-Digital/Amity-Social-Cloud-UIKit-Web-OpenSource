@@ -17,6 +17,9 @@ export const FeedScrollContainer = styled(InfiniteScroll)`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (min-width: 601px) {
+      border-radius: 8px;
+    }
   }
 `;
 
