@@ -11,14 +11,16 @@ export const OptionMenu = styled(UIOptionMenu)`
 export const PostContainer = styled(({ className, ...props }) => (
   <div className={cx('post', className)} {...props} />
 ))`
-  // padding: 16px;
-  // padding-bottom: 8px;
   max-width: 600px;
   margin: 0 auto;
   background: ${({ theme }) => theme.palette.system.background};
+  .skeleton-div {
+    padding: 0 16px;
+  }
   @media (min-width: 601px) {
     border-radius: 15px;
     border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
+    overflow: hidden;
   }
   @media (max-width: 600px) {
     border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};
@@ -49,13 +51,13 @@ export const ReviewButtonsContainer = styled.div`
 export const ContentSkeleton = () => {
   return (
     <>
-      <div>
+      <div className="skeleton-div">
         <Skeleton style={{ fontSize: 8, maxWidth: 374 }} />
       </div>
-      <div>
+      <div className="skeleton-div">
         <Skeleton style={{ fontSize: 8, maxWidth: 448 }} />
       </div>
-      <div style={{ paddingBottom: 50 }}>
+      <div className="skeleton-div" style={{ paddingBottom: 50 }}>
         <Skeleton style={{ fontSize: 8, maxWidth: 279 }} />
       </div>
     </>

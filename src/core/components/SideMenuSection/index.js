@@ -16,7 +16,10 @@ const SectionContainer = styled.div`
       }
     }
     &.active + div {
-      display: block;
+      transform: scaleY(1);
+      height: auto;
+      margin-top: 15px;
+      padding: 0.5rem;
     }
   }
   @media (min-width: 961px) {

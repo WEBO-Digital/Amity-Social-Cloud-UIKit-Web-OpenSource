@@ -72,7 +72,7 @@ const CommentComposeBar = ({ className, userToReply, onSubmit, currentUserId, po
   }, []);
 
   return (
-    <CommentComposeBarContainer className={className}>
+    <CommentComposeBarContainer className={`${className} composeBar`}>
       <Avatar avatar={file?.fileUrl} backgroundImage={UserImage} />
       <CommentComposeBarInput
         ref={commentInputRef}

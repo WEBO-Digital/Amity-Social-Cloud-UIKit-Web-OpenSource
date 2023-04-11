@@ -10,11 +10,11 @@ const SocialSearch = styled(UiKitSocialSearch)`
   background: ${({ theme }) => theme.palette.system.background};
   padding: 0.5rem;
   @media (max-width: 960px) {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+    height: 0;
+    padding: 0;
     background: ${({ theme }) => theme.palette.grayshade1.main};
   }
 `;

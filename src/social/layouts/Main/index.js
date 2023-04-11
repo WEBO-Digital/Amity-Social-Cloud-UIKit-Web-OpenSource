@@ -64,7 +64,7 @@ const Side = styled.div`
   @media (min-width: 961px) {
     height: calc(100vh - 154px);
     position: sticky;
-    top: 0;
+    top: 26px;
   }
 `;
 

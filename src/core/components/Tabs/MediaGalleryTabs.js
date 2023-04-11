@@ -20,7 +20,7 @@ export default styled(Tabs)`
   ${TabButton} {
     margin: 0;
     padding: 0.5em 0.75em;
-    background: #ebecef;
+    background: ${({ theme }) => theme.palette.grayshade1.main};
     border-radius: 1.5em;
     ${({ theme }) => theme.typography.body}
 

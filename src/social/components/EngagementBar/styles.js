@@ -18,9 +18,6 @@ export const Counters = styled.div`
 export const CommentBar = styled.div`
   background: ${({ theme }) => theme.palette.bgblack.main};
   padding: 0 16px;
-  @media (min-width: 600px) {
-    border-radius: 0 0 15px 15px;
-  }
 `;
 
 export const InteractionBar = styled.div`
@@ -43,4 +40,5 @@ export const CommentIcon = styled(Comment).attrs({ width: 16, height: 16 })`
 export const NoInteractionMessage = styled.div`
   color: ${({ theme }) => theme.palette.base.shade2};
   margin-top: 8px;
+  padding: 16px;
 `;
