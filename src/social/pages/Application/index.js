@@ -22,12 +22,9 @@ const ApplicationContainer = styled.div`
 `;
 
 const StyledCommunitySideMenu = styled(CommunitySideMenu)`
-  min-height: 100%;
+  height: 100%;
   @media (max-width: 960px) {
     width: 100%;
-  }
-  @media (min-width: 961px) {
-    min-height: calc(100vh - 52px);
   }
 `;
 

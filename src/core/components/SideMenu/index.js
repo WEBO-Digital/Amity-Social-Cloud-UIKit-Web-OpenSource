@@ -11,7 +11,5 @@ export default styled.div`
   }
   @media (min-width: 961px) {
     background-color: ${({ theme }) => theme.palette.system.background};
-    border-radius: 15px;
-    margin: 26px 0;
   }
 `;
