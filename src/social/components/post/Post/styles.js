@@ -20,7 +20,6 @@ export const PostContainer = styled(({ className, ...props }) => (
   @media (min-width: 601px) {
     border-radius: 15px;
     border: 1px solid ${({ theme }) => theme.palette.grayshade1.main};
-    overflow: hidden;
   }
   @media (max-width: 600px) {
     border-top: 4px solid ${({ theme }) => theme.palette.grayshade1.main};

@@ -31,6 +31,7 @@ export const ArrowSeparator = styled(ArrowRight).attrs({
 
 export const ShieldIcon = styled(Shield)`
   margin-right: 4px;
+  width: 20px;
 `;
 
 export const ModeratorBadge = styled.div`
@@ -39,6 +40,9 @@ export const ModeratorBadge = styled.div`
   margin-right: 4px;
   color: ${({ theme }) => theme.palette.base.shade1};
   ${({ theme }) => theme.typography.captionBold};
+  svg {
+    width: 20px;
+  }
 `;
 
 export const MessageContainer = styled.div`

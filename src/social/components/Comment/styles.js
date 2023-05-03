@@ -21,6 +21,7 @@ export const CommentBlock = styled.div`
   // border-bottom: 1px solid #e3e4e8;
   .composeBar {
     margin: 0 -16px;
+    border-radius: 0 0 15px 15px;
   }
 `;
 

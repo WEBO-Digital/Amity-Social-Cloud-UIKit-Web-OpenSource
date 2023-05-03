@@ -27,7 +27,7 @@ export const Notifications = styled.div`
 `;
 
 export const NotificationContainer = styled.div`
-  width: 480px;
+  width: 460px;
   padding: 8px 30px;
   display: flex;
   justify-content: center;
@@ -36,10 +36,13 @@ export const NotificationContainer = styled.div`
   background: ${({ theme }) => theme.palette.base.main};
   border-radius: 4px;
   margin-bottom: 10px;
+  color: rgb(199, 27, 25);
 
   animation-duration: 0.3s;
   animation-name: appear;
-
+  @media (max-width: 480px) {
+    width: 280px;
+  }
   @keyframes appear {
     from {
       opacity: 0;

@@ -50,6 +50,10 @@ const Main = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+  @media (max-width: 340px) {
+    min-width: auto;
+    width: 100%;
+  }
 `;
 
 const Side = styled.div`

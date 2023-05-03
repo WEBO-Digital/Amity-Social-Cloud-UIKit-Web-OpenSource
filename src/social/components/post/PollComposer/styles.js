@@ -116,6 +116,11 @@ export const ControllerContainer = styled.div`
 export const FieldContainer = styled.div`
   display: flex;
   width: 100%;
+  @media (max-width: 480px) {
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 `;
 
 export const SubmitButton = styled(PrimaryButton).attrs({
@@ -151,6 +156,9 @@ export const OptionInputContainer = styled.div`
     position: absolute;
     top: 14px;
     right: 8px;
+  }
+  input {
+    color: #000000 !important;
   }
 `;
 

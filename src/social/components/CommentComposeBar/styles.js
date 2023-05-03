@@ -14,6 +14,7 @@ export const CommentComposeBarContainer = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  border-radius: 0 0 15px 15px;
 `;
 
 export const CommentComposeBarInput = styled(InputText).attrs({ rows: 1, maxRows: 15 })`

@@ -43,6 +43,12 @@ export const ModalWindow = styled.div`
   &:focus {
     outline: none;
   }
+  @media (max-width: 520px) {
+    width: calc(100% - 20px);
+  }
+  @media (max-width: 380px) {
+    min-width: auto;
+  }
 `;
 
 export const SmallModalWindow = styled(ModalWindow)`
