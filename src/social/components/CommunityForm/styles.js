@@ -231,6 +231,7 @@ export const AboutTextarea = styled(TextareaAutosize).attrs({ minRows: 3, maxRow
   resize: none;
   border: 1px solid #e3e4e8;
   padding: 10px 12px;
+  color: #000000;
   &:focus-within {
     border-color: ${({ theme }) => theme.palette.primary.main};
   }
@@ -242,6 +243,7 @@ export const TextField = styled.input`
   border: 1px solid #e3e4e8;
   padding: 10px 12px;
   outline: none;
+  color: #000000;
   &:focus-within {
     border-color: ${({ theme }) => theme.palette.primary.main};
   }

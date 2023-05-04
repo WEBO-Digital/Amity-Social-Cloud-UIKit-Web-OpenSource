@@ -57,7 +57,7 @@ const styling = css`
 `;
 
 const TextField = styled.input`
-  ${styling}
+  ${styling};
 `;
 
 const TextArea = styled(TextareaAutosize)`
