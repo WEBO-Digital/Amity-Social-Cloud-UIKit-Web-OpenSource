@@ -143,6 +143,12 @@ export const DeletedReplyContainer = styled.div`
   color: ${({ theme }) => theme.palette.base.shade2};
   border-radius: 4px;
   padding: 4px 8px 2px 0px;
+  span {
+    color: rgb(199, 27, 25);
+  }
+  svg {
+    fill: rgb(199, 27, 25);
+  }
 `;
 
 export const DeletedIcon = styled(MinusCircle).attrs({ width: 18, height: 18 })``;
